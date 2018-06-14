@@ -1,3 +1,3 @@
 # create replication user
-CREATE USER 'sys_rpl'@'%' IDENTIFIED BY 'test';
-GRANT REPLICATION SLAVE ON asunee.* TO 'sys_rpl'@'%';
+CREATE USER 'slave_user'@'%' IDENTIFIED BY 'test';
+GRANT REPLICATION SLAVE ON *.* TO 'slave_user'@'%';
