@@ -14,17 +14,20 @@ services:
       - ./mysql/db-master.sql:/docker-entrypoint-initdb.d/db-master.sql
   db2:
     image: mysql-dev:0.1.0
-    ports:
-      - "3307:3306"
     env_file:
       - db-default.env
     volumes:
       - ./mysql/db-init.sql:/docker-entrypoint-initdb.d/db-init.sql
   db3:
     image: mysql-dev:0.1.0
-    ports:
-      - "3308:3306"
     env_file:
       - db-default.env
     volumes:
       - ./mysql/db-init.sql:/docker-entrypoint-initdb.d/db-init.sql
+  haproxy:
+    image: haproxy:1.8
+    ports:
+      - "3307:3306"
+      - "1080:1080"
+    volumes:
+      - ./haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg

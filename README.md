@@ -12,6 +12,8 @@ An interesting attempt to learn mysql repliction and proxy.
 4. Run start commands. `CHANGE MASTER ...` and `START SLAVE`.
 
 ### References
-- [how-to-set-up-master-slave-replication-in-mysql - digitalocean](https://www.digitalocean.com/community/tutorials/how-to-set-up-master-slave-replication-in-mysql)
+- [how-to-set-up-master-slave-replication-in-mysql](https://www.digitalocean.com/community/tutorials/how-to-set-up-master-slave-replication-in-mysql)
 - [You can't restrict GRANT REPLICATION SLAVE to only one database](https://stackoverflow.com/questions/41960979/how-to-grant-replication-privilege-to-a-database-in-mysql)
 - [MySQL Load Balancing with HAProxy](https://severalnines.com/resources/tutorials/mysql-load-balancing-haproxy-tutorial)
+- [High availability read-write splitting with php-mysqlnd, MySQL Replication and HAProxy](https://severalnines.com/blog/high-availability-read-write-splitting-php-mysqlnd-mysql-replication-and-haproxy)
+- [How To Use HAProxy to Set Up MySQL Load Balancing](https://www.digitalocean.com/community/tutorials/how-to-use-haproxy-to-set-up-mysql-load-balancing--3)
