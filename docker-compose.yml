@@ -4,28 +4,27 @@ services:
     build:
       context: ./mysql-dev
       dockerfile: Dockerfile
-    image: mysql-dev:0.1.0
+    image: mysql-dev:0.2.0
+    container_name: db_master
     ports:
       - "3306:3306"
     env_file:
-      - db-default.env
+      - ./mysql/db-default.env
     volumes:
-      - ./mysql/db-init.sql:/docker-entrypoint-initdb.d/db-init.sql
       - ./mysql/db-master.sql:/docker-entrypoint-initdb.d/db-master.sql
   db2:
-    image: mysql-dev:0.1.0
+    image: mysql-dev:0.2.0
+    container_name: db_slave_1
     env_file:
-      - db-default.env
-    volumes:
-      - ./mysql/db-init.sql:/docker-entrypoint-initdb.d/db-init.sql
+      - ./mysql/db-default.env
   db3:
-    image: mysql-dev:0.1.0
+    image: mysql-dev:0.2.0
+    container_name: db_slave_2
     env_file:
-      - db-default.env
-    volumes:
-      - ./mysql/db-init.sql:/docker-entrypoint-initdb.d/db-init.sql
+      - ./mysql/db-default.env
   haproxy:
     image: haproxy:1.8
+    container_name: haproxy
     ports:
       - "3307:3306"
       - "1080:1080"

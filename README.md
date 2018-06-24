@@ -17,3 +17,4 @@ An interesting attempt to learn mysql repliction and proxy.
 - [MySQL Load Balancing with HAProxy](https://severalnines.com/resources/tutorials/mysql-load-balancing-haproxy-tutorial)
 - [High availability read-write splitting with php-mysqlnd, MySQL Replication and HAProxy](https://severalnines.com/blog/high-availability-read-write-splitting-php-mysqlnd-mysql-replication-and-haproxy)
 - [How To Use HAProxy to Set Up MySQL Load Balancing](https://www.digitalocean.com/community/tutorials/how-to-use-haproxy-to-set-up-mysql-load-balancing--3)
+- [Mysql Replication基本原理](http://shift-alt-ctrl.iteye.com/blog/2266908)
